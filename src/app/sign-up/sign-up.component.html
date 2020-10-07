@@ -1,6 +1,6 @@
-<h1 class="text-center">Sign Up</h1>
-<form [formGroup]="signupForm" (ngSubmit)="signup()" class="form">
-    <mat-form-field>
+<h1 style="text-align: center" class="header">Sign Up</h1>
+<form style="text-align: center;" [formGroup]="signupForm" (ngSubmit)="signup()" class="form">
+    <mat-form-field class="mat-form-field">
         <mat-label>Username</mat-label>
         <input formControlName="username" matInput placeholder="Username" name="username">
         <mat-error>
@@ -8,7 +8,7 @@
         </mat-error>
     </mat-form-field>
 
-    <mat-form-field>
+    <mat-form-field class="mat-form-field">
         <mat-label>Password</mat-label>
         <input type="password" matInput formControlName="password" placeholder="Password" name="password">
         <mat-error>
@@ -20,6 +20,6 @@
         <button mat-raised-button color="primary" [disabled]="signupForm.invalid">Sign Up</button>
     </div>
     <div class="text-center">
-        <a routerLink="/login">Already a user? Login!</a>
+        <a routerLink="/login">Login</a>
     </div>
 </form>

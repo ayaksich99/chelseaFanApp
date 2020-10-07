@@ -10,7 +10,9 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { UsersComponent } from './users/users.component';
 import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomePageDisplayComponent } from './home-page-display/home-page-display.component';
+import { DialogComponentComponent } from './dialog-component/dialog-component.component';
+import { DialogtwoComponent } from './dialogtwo/dialogtwo.component';
+
 
 
 
@@ -22,7 +24,8 @@ import { HomePageDisplayComponent } from './home-page-display/home-page-display.
     HomePageComponent,
     UsersComponent,
     LoginComponent,
-    HomePageDisplayComponent,
+    DialogComponentComponent,
+    DialogtwoComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,50 +1,28 @@
-
-<h1 class="text-center">Login</h1>
-<!-- <mat-drawer-container class="example-container" [hasBackdrop]="hasBackdrop.value">
-    <mat-drawer #drawer [mode]="mode.value">I'm a drawer</mat-drawer>
-    <mat-drawer-content>
-      <mat-form-field>
-        <mat-label>Sidenav mode</mat-label>
-        <mat-select #mode value="side">
-          <mat-option value="side">Side</mat-option>
-          <mat-option value="over">Over</mat-option>
-          <mat-option value="push">Push</mat-option>
-        </mat-select>
-      </mat-form-field>
-      <mat-form-field>
-        <mat-label>Has backdrop</mat-label>
-        <mat-select #hasBackdrop>
-          <mat-option>Unset</mat-option>
-          <mat-option [value]="true">True</mat-option>
-          <mat-option [value]="false">False</mat-option>
-        </mat-select>
-      </mat-form-field>
-      <button mat-raised-button (click)="drawer.toggle()">Toggle drawer</button>
-    </mat-drawer-content>
-  </mat-drawer-container> -->
-
-<form [formGroup]="loginForm" (ngSubmit)="login()" class="form">
-    <mat-form-field>
-        <mat-label>Username</mat-label>
-        <input type="username" matInput formControlName="username" placeholder="Username" name="username">
-        <mat-error>
-            Username must be between 2 and 20 characters
-        </mat-error>
+<div>
+  <h1 class="header" style="text-align: center;">Login</h1>
+  <form style="text-align: center;" [formGroup]="loginForm" (ngSubmit)="login()" class="form">
+    <mat-form-field class="mat-form-field">
+      <mat-label>Username</mat-label>
+      <input type="username" matInput formControlName="username" placeholder="username" name="username">
+      <mat-error>
+        Username must be between 2 and 20 characters
+      </mat-error>
     </mat-form-field>
 
-    <mat-form-field>
-        <mat-label>Password</mat-label>
-        <input type="password" matInput formControlName="password" placeholder="Password" name="password">
-        <mat-error>
-            Password must be between 4 and 16 characters
-        </mat-error>
+    <mat-form-field class="mat-form-field">
+      <mat-label>Password</mat-label>
+      <input type="password" matInput formControlName="password" placeholder="password" name="password">
+      <mat-error>
+        Password must be between 4 and 16 characters
+      </mat-error>
     </mat-form-field>
 
     <div class="button">
-        <button mat-raised-button color="primary" [disabled]="loginForm.invalid">Login</button>
+      <button mat-raised-button color="primary" [disabled]="loginForm.invalid">Login</button>
     </div>
 
     <div class="text-center">
-        <a routerLink="/signup">Not already a user? Sign Up NOW!</a>
+      <a routerLink="/signup"> Sign Up</a>
     </div>
-</form>
+  </form>
+</div>

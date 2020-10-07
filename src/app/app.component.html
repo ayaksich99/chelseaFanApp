@@ -1,1 +1,58 @@
-<router-outlet></router-outlet>
+<mat-toolbar color="accent">
+    <span>Chelsea FC</span>
+    <span class="spacer"></span>
+    <button *ngIf="username !== null" routerLinkActive="active" routerLink="/home-page" mat-icon-button
+    mat-raised-button
+    matTooltip="Home"
+    aria-label="Button that displays a tooltip when focused or hovered over">
+        <mat-icon>home</mat-icon>
+    </button>
+    <button *ngIf="username !== null" routerLinkActive="active" routerLink="/signup" mat-icon-button
+        aria-label="signup">
+        <mat-icon>signup</mat-icon>
+    </button>
+    <button *ngIf="username === null" routerLinkActive="active" routerLink="/login" mat-icon-button
+        aria-label="Login">
+        <mat-icon>login</mat-icon>
+    </button>
+    <button *ngIf="username !== null" (click)="logout()" mat-icon-button 
+        mat-raised-button
+        matTooltip="Logout"
+        aria-label="Button that displays a tooltip when focused or hovered over">
+        <mat-icon>logout</mat-icon>
+    </button>
+    <button *ngIf="username !== null" (click)="teamStandings(standings.league_id)" mat-icon-button 
+    mat-raised-button
+    matTooltip="Standings"
+    aria-label="Button that displays a tooltip when focused or hovered over">
+    <mat-icon>Standings</mat-icon>
+</button>
+
+    <button *ngIf="username !== null"   mat-icon-button 
+    mat-raised-button
+    matTooltip="Stamford Bridge"
+    aria-label="Button that displays a tooltip when focused or hovered over">
+    <a href="https://www.google.com/maps/d/u/0/viewer?hl=en&ie=UTF8&msa=0&source=embed&t=m&z=15&vpsrc=0&mid=1oiL03qNdHPUGjDtWSwkVxoGELwQ&ll=51.4822248506797%2C-0.18392141358099412" target="_blank"><mat-icon>map</mat-icon></a>
+        
+    </button>
+
+    <button *ngIf="username !== null"   mat-icon-button 
+    mat-raised-button
+    matTooltip="Tickets"
+    aria-label="Button that displays a tooltip when focused or hovered over">
+    <a href="https://www.chelseafc.com/en/tickets---membership/buy-tickets?pageTab=GENERAL%20ADMISSION" target="_blank"><mat-icon>Tickets</mat-icon></a>
+        
+    </button>
+    <button *ngIf="username !== null"   mat-icon-button 
+    mat-raised-button
+    matTooltip="Shop"
+    aria-label="Button that displays a tooltip when focused or hovered over">
+    <a href="https://www.chelseamegastore.com/stores/chelsea/en?portal=YWWHC8IP&CMP=PSC-YWWHC8IP" target="_blank"><mat-icon>Shop</mat-icon></a>
+        
+    </button>
+</mat-toolbar>
+
+<div class="page-container">
+    <router-outlet></router-outlet>
+</div>
+

@@ -1,6 +1,38 @@
+.text-center{
+  margin-bottom: 25px;
+}
+
 .example-card {
-    max-width: 400px;
-  }
-
-
-  
+  flex-basis: 275px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin: 25px;
+}
+.example-card:hover {
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  background: lightskyblue;
+  border-radius: 10%;
+}
+.rotate {
+  -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+.rotate:hover {
+  -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+.parent{
+  display: flex;
+  flex-flow: row wrap;
+  row-gap: 20px;
+  justify-content: center;
+  background: lightsteelblue;
+}
+.header{
+  font-family: cursive;
+}

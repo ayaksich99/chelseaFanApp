@@ -1,0 +1,21 @@
+.form{
+    margin: 10px auto;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 700px
+}
+
+.text-center{
+    text-align: right;
+    font-family: cursive;
+}
+
+.button{
+    flex-basis: 90%;
+    text-align: right;
+}
+
+.mat-form-field{
+    margin: 0 10px;
+    flex: 500px;
+}
