@@ -10,19 +10,12 @@ import { HomePageService } from '../services/homepage.service';
   styleUrls: ['./dialog-component.component.scss']
 })
 export class DialogComponentComponent implements OnInit {
+  res: boolean = true;
   players: Array<Player> = this.homepageservice.players 
   constructor(@Inject(MAT_DIALOG_DATA) public data: any, private homepageservice: HomePageService) { }
 
   ngOnInit(): void {
-    console.log(this.data);
-    // If it's an error show that
-    if (this.homepageservice.playerSearch === null){
-      return alert("Unavailable");
-    }
-    // If not, pull out the 0th index
-    else{
-      this.homepageservice.playerSearch[0];
-    }
+  
   }
 
 }

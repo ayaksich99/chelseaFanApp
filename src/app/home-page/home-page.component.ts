@@ -17,9 +17,14 @@ last_name: string;
 constructor(private homepageservice: HomePageService, public dialog: MatDialog) { }
 
 searchPlayer(player_name: string){
-  this.homepageservice.playerSearch(player_name).subscribe((res: any) => {
-    // Open dialog
-    this.players.filter(p => p.player_name === player_name)
+  this.homepageservice.playerSearch(player_name)
+  .subscribe((res: any) => {
+  
+    // If it's an array then pass the res.filter(...) to the dialog
+    if (res instanceof Array){
+      res = this.homepageservice.players.filter(p => p.player_name === player_name);
+      console.log("filtering names");
+    }
     this.dialog.open(DialogComponentComponent, {
       data: res
     })
