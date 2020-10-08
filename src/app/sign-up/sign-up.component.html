@@ -2,7 +2,7 @@
 <form style="text-align: center;" [formGroup]="signupForm" (ngSubmit)="signup()" class="form">
     <mat-form-field class="mat-form-field">
         <mat-label>Username</mat-label>
-        <input formControlName="username" matInput placeholder="Username" name="username">
+        <input formControlName="username" matInput placeholder="" name="username">
         <mat-error>
             Username must be between 2 and 20 characters
         </mat-error>
@@ -10,7 +10,7 @@
 
     <mat-form-field class="mat-form-field">
         <mat-label>Password</mat-label>
-        <input type="password" matInput formControlName="password" placeholder="Password" name="password">
+        <input type="password" matInput formControlName="password" placeholder="" name="password">
         <mat-error>
             Password must be between 4 and 16 characters
         </mat-error>
