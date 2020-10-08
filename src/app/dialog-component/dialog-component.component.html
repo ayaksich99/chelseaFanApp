@@ -1,11 +1,14 @@
 <div class="dialog-player">
-    <ng-container *ngIf="!data">>   
-        <h4>Name:<p>{{data[0].player_name}}</p></h4>
-        <h4>Number:<p>{{data[0].player_number}}</p></h4>
-        <h4>Country:<p>{{data[0].player_country}}</p></h4>
-        <h4>Position:<p>{{data[0].player_type}}</p></h4>
-        <h4>Age:<p>{{data[0].player_age}}</p></h4>
+    <ng-container *ngIf="data.res">>   
+        <h4>Name:<p>{{data.res.player_name}}</p></h4>
+        <h4>Number:<p>{{data.res.player_number}}</p></h4>
+        <h4>Country:<p>{{data.res.player_country}}</p></h4>
+        <h4>Position:<p>{{data.res.player_type}}</p></h4>
+        <h4>Age:<p>{{data.res.player_age}}</p></h4>
         <P class="dialog-paragraph">(Click Outside Dialog to exit)</P>
+    </ng-container>
+    <ng-container *ngIf="!data.res">
+        Player data not found!
     </ng-container>
 </div> 
 
