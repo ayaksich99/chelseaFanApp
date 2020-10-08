@@ -23,9 +23,14 @@ export class AppComponent {
     this.usersService.logout()
   }
   teamStandings(league_id: string){
-    this.homepageservice.teamStandings(league_id).subscribe((res: any) =>{
+    this.homepageservice.teamStandings(league_id)
+    .subscribe((res: any) =>{
+      if (res instanceof Array) {
+        res = res.filter(id => id.league_id === league_id)[0]
+      }
+      
       this.dialog.open(DialogtwoComponent,{
-        data: res
+        data: { res : res }
       })
     });
   }
