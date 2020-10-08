@@ -22,7 +22,7 @@ searchPlayer(player_name: string){
   
     // If it's an array then pass the res.filter(...) to the dialog
     if (res instanceof Array){
-      res = this.homepageservice.players.filter(p => p.player_name === player_name);
+      res = res.filter(p => p.player_name === player_name)[0];
       console.log("filtering names");
     }
     this.dialog.open(DialogComponentComponent, {
