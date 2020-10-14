@@ -12,6 +12,7 @@ import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DialogComponentComponent } from './dialog-component/dialog-component.component';
 import { DialogtwoComponent } from './dialogtwo/dialogtwo.component';
+import { FixtureComponent } from './fixture/fixture.component';
 
 
 
@@ -27,6 +28,7 @@ import { DialogtwoComponent } from './dialogtwo/dialogtwo.component';
     LoginComponent,
     DialogComponentComponent,
     DialogtwoComponent,
+    FixtureComponent,
   ],
   imports: [
     BrowserModule,

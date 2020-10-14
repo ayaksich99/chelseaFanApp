@@ -19,7 +19,13 @@
         mat-raised-button
         matTooltip="Logout"
         aria-label="Button that displays a tooltip when focused or hovered over">
-        <mat-icon>logout</mat-icon>
+        <mat-icon>Logout</mat-icon>
+    </button>
+    <button *ngIf="username !== null" routerLinkActive="active" routerLink="/fixture" mat-icon-button
+    mat-raised-button
+    matTooltip="Fixture"
+    aria-label="Button that displays a tooltip when focused or hovered over">
+        <mat-icon>Fixture</mat-icon>
     </button>
     <button *ngIf="username !== null" (click)="teamStandings(res)" mat-icon-button 
     mat-raised-button

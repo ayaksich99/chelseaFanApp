@@ -1,0 +1,13 @@
+<h2 style="text-align: center;">Fixtures</h2>
+<button mat-raised-button (click)="addColumn()"> Add column </button>
+<button mat-raised-button (click)="removeColumn()"> Remove column </button>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
+    <th mat-header-cell *matHeaderCellDef> {{column}} </th>
+    <td mat-cell *matCellDef="let fixture"> {{fixture[column]}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+  <tr mat-row *matRowDef="let row; columns: columnsToDisplay;"></tr>
+</table>
