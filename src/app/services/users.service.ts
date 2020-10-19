@@ -32,7 +32,7 @@ export class UsersService {
   }
   login(username: string, password: string){
     // make sure it matches with username and password by filtering
-    this.user = usernamejl
+    this.user = username
     let userByName = this.users.filter(user => user.username === username && user.password === password)
     // this is saying the array matches with the filter.
     if (userByName.length === 1){

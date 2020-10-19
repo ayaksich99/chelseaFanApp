@@ -19,12 +19,21 @@ export class AppComponent {
   constructor(private usersService: UsersService, private homepageservice: HomePageService, public dialog: MatDialog) {
     this.usersService.user$.subscribe((users: string) => this.username = users);
   }
-
+  teamStandings(league_id: string){
+    this.homepageservice.teamStandings(league_id)
+    .subscribe((res: any) =>{
+      if(!res){
+          return res.send({ success: false})
+      }
+      this.dialog.open(DialogtwoComponent,{
+        data: { res : res }
+      })
+    
+    });
+  }
   logout(){
     this.usersService.logout()
   }
-  teamStandings(league_id: string){
-    this.homepageservice.teamStandings(league_id)
-  }
+
 }
 
