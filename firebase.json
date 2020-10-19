@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "chelseafanapp-4bc02",
+    "public": "chelseaFanApp",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

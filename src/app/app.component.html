@@ -27,7 +27,7 @@
     aria-label="Button that displays a tooltip when focused or hovered over">
         <mat-icon>Fixture</mat-icon>
     </button>
-    <button *ngIf="username !== null" (click)="teamStandings(res)" mat-icon-button 
+    <button *ngIf="username !== null" (click)="teamStandings(standings.league_id)" mat-icon-button 
     mat-raised-button
     matTooltip="Standings"
     aria-label="Button that displays a tooltip when focused or hovered over">
@@ -57,6 +57,11 @@
         
     </button>
 </mat-toolbar>
+<ul>
+    <li class="text" *ngFor="let item of items | async">
+      {{item.name}}
+    </li>
+  </ul>
 
 <div class="page-container">
     <router-outlet></router-outlet>
