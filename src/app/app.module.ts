@@ -19,6 +19,8 @@ import { FixtureComponent } from './fixture/fixture.component';
 
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +41,7 @@ import { FixtureComponent } from './fixture/fixture.component';
     ReactiveFormsModule,
     BrowserAnimationsModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
