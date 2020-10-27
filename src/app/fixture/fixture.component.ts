@@ -10,7 +10,7 @@ const ELEMENT_DATA: Fixture[]= [
   {date:'Sat 3 Oct', kickoff: 	'12:30', match:	'Chelsea v Crystal Palace', score:	'4  - 0', result:'W', competition:	'Premier League'},
   {date:'Sat 17 Oct', kickoff: 	'15:00', match:	'Chelsea v Southampton', score:	'3 - 3', result:'D', competition:		'Premier League'},	
   {date:'Tue 20 Oct', kickoff: 	'19:45', match:	'Chelsea v Sevilla', score:	'0 - 0', result:'D', competition:		'Champions League'},
-  {date:'Sat 24 Oct', kickoff: 	'17:30', match:	'Manchester United v Chelsea', score:''	, result:'', competition:		'Premier League'},
+  {date:'Sat 24 Oct', kickoff: 	'17:30', match:	'Manchester United v Chelsea', score:'0 - 0'	, result:'D', competition:  'Premier League'},
   {date:'Wed 28 Oct', kickoff: 	'19:45', match:	'Krasnodar v Chelsea', score:	'', result:'', competition:		'Champions League'},
   {date:'Sat 31 Oct', kickoff: 	'15:00', match:	'Burnley v Chelsea', score:	'', result:'', competition:		'Premier League'},	
   {date:'Wed 4 Nov', kickoff: 	'19:45', match:	'Chelsea v Rennes', score:'', result:'', competition:			'Champions League'},
