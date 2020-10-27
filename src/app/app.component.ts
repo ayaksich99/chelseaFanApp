@@ -15,21 +15,21 @@ import { UsersService } from './services/users.service';
 export class AppComponent {
   title = 'chelseaFanApp';
   username: string;
-  standings: Array<Standings> = this.homepageservice.standings
+  standings: Array<Standings> 
   constructor(private usersService: UsersService, private homepageservice: HomePageService, public dialog: MatDialog) {
     this.usersService.user$.subscribe((users: string) => this.username = users);
   }
-  teamStandings(league_id: string){
-    this.homepageservice.teamStandings(league_id)
+  teamStandings(){
+    this.homepageservice.teamStandings()
     .subscribe((res: any) =>{
-      if(!res){
-          return res.send({ success: false})
-      }
+      res = res.filter(n => n.team_name === 'Chelsea')[0];
       this.dialog.open(DialogtwoComponent,{
-        data: { res : res }
+        data: res
       })
-    
+      console.log('Standings')
     });
+  
+  
   }
   logout(){
     this.usersService.logout()

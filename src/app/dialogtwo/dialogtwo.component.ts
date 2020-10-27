@@ -15,6 +15,7 @@ export class DialogtwoComponent implements OnInit {
   //   this.homepageservice.teamStandings(league_id)
   // }
   ngOnInit(): void {
+    console.log(this.data);
   }
 
 }

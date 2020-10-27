@@ -1,15 +1,16 @@
-<div>
-    <ng-container class="standings" *ngIf="data.res">
-        <h4><p>{{data[0].id</p></h4>
-        <h4>League:<p>{{data[0].league_name</p></h4>
-        <h4>Team:<p>{{data[0].team_name</p></h4>
-        <h4>Wins:<p>{{data[0].overall_league_W}}</p></h4>
-        <h4>Draws:<p>{{data[0].overall_league_D}}</p></h4>
-        <h4>Losses:<p>{{data[0].overall_league_L}}</p></h4>
-        <h4>League Points:<p>{{data[0].overall_league_PTS}}</p></h4>
+<div class="standings">
+    <ng-container *ngIf="data">
+        <h4>Country:<p>{{data.country_name}}</p></h4>
+        <h4>League:<p>{{data.league_name}}</p></h4>
+        <h4>Team:<p>{{data.team_name}}</p></h4>
+        <h4>League Position:<p>{{data.overall_league_position}}</p></h4>
+        <h4>Wins:<p>{{data.overall_league_W}}</p></h4>
+        <h4>Draws:<p>{{data.overall_league_D}}</p></h4>
+        <h4>Losses:<p>{{data.overall_league_L}}</p></h4>
+        <h4>League Points:<p>{{data.overall_league_PTS}}</p></h4>
         <P class="dialog-paragraph">(Click Outside Dialog to exit)</P>
     </ng-container>
-    <ng-container *ngIf="!data.res">
+    <ng-container *ngIf="!data">
         No standings at the moment
     </ng-container>
 </div>

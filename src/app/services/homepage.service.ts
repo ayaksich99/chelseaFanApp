@@ -36,7 +36,7 @@ export class HomePageService {
     {player_name:'Callum Hudson Odoi', team_name: 'Chelsea', player_type: 'Forward', image: "https://res.cloudinary.com/chelsea-production/image/upload/c_fill,dpr_auto,f_auto,fl_lossy,g_auto,h_410,q_auto,w_350,z_1.0/v1/editorial/people/first-team/2020-21/portrait/Hudson_Odoi_-_portrait_-_july20"},
   ];
   standings: Array<Standings> = [
-    {league_id: '148', team_name: 'Chelsea'}
+    {team_name: 'Chelsea'}
   ];
   constructor(private http: HttpClient) { }
   playerSearch(player_name: string){
@@ -46,7 +46,7 @@ export class HomePageService {
     
     return this.http.get(`https://apiv2.apifootball.com/?action=get_players&player_name=${last_name}&${first_name}&APIkey=a852350dfc35e1a6a8fcb18cfd849102db07a465a13a9862243adbbd87a8ace5`)
   }
-  teamStandings(league_id: string){
-    return this.http.get(`https://apiv2.apifootball.com/?action=get_standings&league_id=${league_id}&APIkey=a852350dfc35e1a6a8fcb18cfd849102db07a465a13a9862243adbbd87a8ace5`)
+  teamStandings(){
+    return this.http.get(`https://apiv2.apifootball.com/?action=get_standings&league_id=148&&APIkey=a852350dfc35e1a6a8fcb18cfd849102db07a465a13a9862243adbbd87a8ace5`)
   }
 }

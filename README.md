@@ -1,6 +1,5 @@
 # ChelseaFanApp
 
-DIALOGTWO COMPONENT DISPLAYS STANDINGS API, API FOR STANDINGS IS NOT WORKING AND HAVING INTERNAL ERROR 500 ISSUES. (JUST A HEADS UP)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.2.
 
